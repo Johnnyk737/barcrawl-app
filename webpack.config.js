@@ -36,7 +36,7 @@ var client = {
     "react-dom": "ReactDOM"
   },
   resolve: {
-    extensions: ['.js', '.json', '.css', '.less']
+    extensions: ['.js', '.json', '.css', '.less', '.jpg']
   },
   devtool: 'source-map',
   module: {
@@ -66,11 +66,14 @@ var client = {
             loader: "less-loader"
           }
         ]
+      },
+      {
+        test: /\.(jpe?g|gif|png|svg)$/i,
+        use: [
+          'url-loader'
+          // 'file-loader',
+        ],
       }
-      // {
-      //   test: /\.(svg|ttf|woff|woff2|eot)$/,
-      //   loader: 'url?limit=5000'
-      // }
     ]
   }
 };

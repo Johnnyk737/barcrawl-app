@@ -6,9 +6,10 @@ let server = express()
 const port = process.env.port || 3000
 
 server.use(express.static("dist"))
+server.use(express.static("app/assets"))
 
 server.get('*', function(req, res) {
-  res.sendFile(path.resolve('./app/index.html'));
+  res.sendFile(path.resolve('app/index.html'));
 })
 
 server.listen(port, () => console.log(`Server up and running on port ${port} !`));
