@@ -14,15 +14,16 @@ class Main extends React.Component {
     return (
       <>
         <TopNav />
+        <Container className="full-width position-absolute">
+          <div>
+            <img className='welcome-page-image' src={barImg} />
+          </div>
+        </Container>
         <section className="py-6 px-6">
           {/* TODO: we'll put a big picture of a bar in the background */}
           <Container>
             <Row>
-              <div>
-                <img className='welcome-page-image' src={barImg} />
-              </div>
-            <span>Photo by <a href="https://unsplash.com/@impatrickt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Patrick Tomasso</a> on <a href="https://unsplash.com/s/photos/bar?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-              { null || null}
+             { null || null}
             </Row>
           </Container>
         </section>
