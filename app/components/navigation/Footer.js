@@ -1,10 +1,11 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import '../../styles/footer.less'
+// constants
+import constants from '../../constants';
+import '../../styles/footer.less';
 
-class Footer extends React.Component {
-  render() {
+export const Footer = ()  => {
     return (
       <>
         <footer className="position-relative z-index-10 d-print-none">
@@ -12,36 +13,45 @@ class Footer extends React.Component {
             <div className="container">
               <div className="row">
                 <div className="col-lg-2 col-md-3 mb-5 mb-lg-0">
-                  <div className="font-weight-bold text-uppercase text-dark mb-3">
-                    Directory
-                  </div>
-                  <p>
-                    Facebook, Instagram
-                  </p>
-                </div>
-                <div className="col-md-3 mb-5 mb-lg-0">
                   <h6 className="font-weight-bold text-uppercase text-dark mb-3">
-                    Links
+                    {constants.footer.directory}
                   </h6>
                   <ul className="list-unstyled">
                     <li>
                       <Link className="nav-link" to="/">
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-link" to="/crawl">
-                        Plan your Crawl
+                        Facebook
                       </Link>
                     </li>
                     <li>
                       <Link className="nav-link" to="/">
-                        Link 3
+                      Instagram
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col-md-3 mb-5 mb-lg-0">
+                  <h6 className="font-weight-bold text-uppercase text-dark mb-3">
+                    {constants.footer.links}
+                  </h6>
+                  <ul className="list-unstyled">
+                    <li>
+                      <Link className="nav-link" to="/">
+                        {constants.nav.home}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="nav-link" to="/crawl">
+                        {constants.nav.crawl}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="nav-link" to="/">
+                        {constants.nav.link3}
                       </Link>
                     </li>
                     <li>
                       <Link className="nav-link" to="/about">
-                        About
+                        {constants.nav.about}
                       </Link>
                     </li>
                   </ul>
@@ -55,7 +65,7 @@ class Footer extends React.Component {
               <div className="row align-items-center">
                 <div className="text-md-left text-center col-md-6">
                   {/* TODO: link to portfolio, add contact info */}
-                  contact, copyright, developed by John Kroll, link to portfolio
+                  {constants.footer.copyright}
                 </div>
               </div>
             </div>
@@ -64,6 +74,3 @@ class Footer extends React.Component {
       </>
     )
   }
-}
-
-export default Footer

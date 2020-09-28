@@ -1,0 +1,14 @@
+{
+  "title": "BarCrawler",
+  "nav": {
+    "home": "Home",
+    "crawl": "Plan the Crawl",
+    "link3": "Link 3 Text",
+    "about": "About"
+  },
+  "footer": {
+    "directory": "Directory",
+    "links": "Links",
+    "copyright": "contact, copyright, developed by John Kroll, link to portfolio"
+  }
+}
