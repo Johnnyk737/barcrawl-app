@@ -16,8 +16,8 @@ import L from 'leaflet'
 import { Map, Marker, TileLayer, Popup } from 'react-leaflet'
 
 // import Map from '../map/Map'
-import TopNav from '../navigation/TopNav'
-import Footer from '../navigation/Footer'
+import { TopNav } from '../navigation/TopNav'
+import { Footer } from '../navigation/Footer'
 
 import '../../styles/crawl.less'
 

@@ -2,8 +2,8 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
-import TopNav from './navigation/TopNav'
-import Footer from './navigation/Footer'
+import { TopNav } from './navigation/TopNav'
+import { Footer } from './navigation/Footer'
 
 import '../styles/main.less'
 
