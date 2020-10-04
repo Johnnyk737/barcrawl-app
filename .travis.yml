@@ -3,6 +3,10 @@ if: (type = push AND branch = master) OR (type = pull_request AND branch = maste
 language: node_js
 node_js:
   - 12
+cache:
+  directories:
+  - node_modules
 script:
   - yarn install
+  - yarn build-storybook
   - yarn build-dev
