@@ -1,8 +1,0 @@
-if: (type = push AND branch = master) OR (type = pull_request AND branch = master)
-
-language: node_js
-node_js:
-  - 12
-script:
-  - yarn install
-  - yarn build-dev
