@@ -14,16 +14,19 @@ class Main extends React.Component {
     return (
       <>
         <TopNav />
-        <Container className="full-width position-absolute">
+        <Container className="full-width position-relative overflow-hidden">
           <div>
-            <img className='welcome-page-image' src={barImg} />
+            {/* would like this to scale the image to the screen by ratio */}
+            <img id="welcome-page-image1" className='welcome-page-image' src={barImg} data-image-dimensions="4032x3024" data-image-ratio="0.75"/>
           </div>
         </Container>
-        <section className="py-6 px-6">
-          {/* TODO: we'll put a big picture of a bar in the background */}
+        <section id="item-section-1" className="item-section-1">
+          {/* This will go on top of the image */}
           <Container>
             <Row>
-             { null || null}
+              <div className="text-color">
+                Plan a customized bar crawl!
+              </div>
             </Row>
           </Container>
         </section>

@@ -1,4 +1,4 @@
-# BarCrawl app
+# BarCrawl app [![Build Status](https://travis-ci.com/Johnnyk737/barcrawl-app.svg?branch=master)](https://travis-ci.com/Johnnyk737/barcrawl-app)
 
 This app lets you create a custom bar/pub crawl!
 
