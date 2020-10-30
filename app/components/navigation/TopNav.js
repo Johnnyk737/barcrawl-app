@@ -29,7 +29,6 @@ export const TopNav = ({showSearch, onClick}) => {
   return (
     <Navbar expand='lg' className="fixed-top shadow ">
       <div id="image-text" className="navbar-brand header-title">
-        {/* TODO: Keep center at smaller widths */}
         <Navbar.Brand id="title">
           {constants.title}
           {/* <Link className='nav-link' to='/'>Dranks</Link> */}

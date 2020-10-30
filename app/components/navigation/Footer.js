@@ -65,7 +65,6 @@ export const Footer = ()  => {
             <div className="container">
               <div className="row align-items-center">
                 <div className="text-md-left text-center">
-                  {/* TODO: link to portfolio, add contact info */}
                   <div dangerouslySetInnerHTML={{__html: constants.footer.copyright}} />
                 </div>
               </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
+import PropTypes from 'prop-types';
 
 import { TopNav } from './navigation/TopNav'
 import { Footer } from './navigation/Footer'
@@ -8,9 +9,9 @@ import { Footer } from './navigation/Footer'
 import '../styles/main.less'
 import barImg from '../assets/images/patrick-tomasso-GXXYkSwndP4-unsplash.jpg'
 
-class Main extends React.Component {
+export const Main = ({text}) => {
 
-  render() {
+
     return (
       <>
         <TopNav />
@@ -25,7 +26,7 @@ class Main extends React.Component {
           <Container>
             <Row>
               <div className="text-color">
-                Plan a customized bar crawl!
+                {text}
               </div>
             </Row>
           </Container>
@@ -33,7 +34,13 @@ class Main extends React.Component {
         <Footer />
       </>
     )
-  }
+  
 }
 
-export default Main
+Main.propTypes = {
+  text: PropTypes.string,
+};
+
+Main.defaultProps = {
+  text: "Default text",
+};

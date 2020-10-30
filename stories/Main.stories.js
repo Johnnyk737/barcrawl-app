@@ -1,5 +1,5 @@
 import React from 'react';
-import Main from '../app/components/Main';
+import { Main } from '../app/components/Main';
 import StoryRouter from 'storybook-react-router';
 
 export default {
@@ -11,4 +11,5 @@ export default {
 const Template = (args) => <Main {...args} />;
 export const Default = Template.bind({});
 Default.args = {
+  text: "Default text"
 };
