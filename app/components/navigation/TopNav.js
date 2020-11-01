@@ -14,7 +14,6 @@ export const TopNav = ({showSearch, onClick}) => {
     if (show) {
       return (
         <div className="form-inline my-2 my-lg-0 ml-auto">
-            {/* TODO: at smaller widths, turn this into a search icon (magnifying glass) */}
             {/* <div className="search-bar form-control mr-sm-2"> */}
                 <input type="search" 
                   className="search-bar form-control mr-sm-2" 

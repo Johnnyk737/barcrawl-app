@@ -16,9 +16,6 @@ import L from 'leaflet'
 import { Map, Marker, TileLayer, Popup } from 'react-leaflet'
 
 // import Map from '../map/Map'
-import { TopNav } from '../navigation/TopNav'
-import { Footer } from '../navigation/Footer'
-
 import '../../styles/crawl.less'
 
 const locationOptions = {
@@ -26,8 +23,7 @@ const locationOptions = {
   maximumAge: 30000,
   timeout: 27000};
 
-class Crawl extends React.Component {
-  
+class Map extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -68,9 +64,8 @@ class Crawl extends React.Component {
       latlng: e.latlng,
     })
   }
-
+  
   render() {
-
     if (!this.state.hasLocation) { 
       this.getCurrentLocation()
     }
@@ -81,40 +76,32 @@ class Crawl extends React.Component {
       </Marker>
     ) : null
 
-    
-
     // const map = this.mapRef.current
     // if (map != null) {
     //   map.leafletElement.locate()
     // }
 
-    return(
+    return (
       <>
-        <TopNav />
-        <section className="py-6 px-6">
-          <Map 
-            center={this.state.latlng} 
-            zoom={12}
-            length={4}
-            onClick={this.handleClick}
-            // onLocationfound={this.handleLocationFound}
-            // ref={this.mapRef}
-            >
-            <TileLayer
-              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-              url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+        <Map 
+        center={this.state.latlng} 
+        zoom={12}
+        length={4}
+        onClick={this.handleClick}
+        // onLocationfound={this.handleLocationFound}
+        // ref={this.mapRef}
+        >
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
             />
-            { marker }
-          </Map>
-        </section>
+          { marker }
+        </Map>
         <section>
           <button className="btn"
             onClick={this.getCurrentLocation}>Get Location</button>
         </section>
-        <Footer />
       </>
     )
   }
 }
-
-export default Crawl

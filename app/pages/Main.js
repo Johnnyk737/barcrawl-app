@@ -3,8 +3,8 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import PropTypes from 'prop-types';
 
-import { TopNav } from './navigation/TopNav'
-import { Footer } from './navigation/Footer'
+import { TopNav } from '../components/navigation/TopNav'
+import { Footer } from '../components/navigation/Footer'
 
 import '../styles/main.less'
 import barImg from '../assets/images/patrick-tomasso-GXXYkSwndP4-unsplash.jpg'
