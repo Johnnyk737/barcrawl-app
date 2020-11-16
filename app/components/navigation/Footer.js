@@ -8,7 +8,7 @@ import '../../styles/footer.less';
 export const Footer = ()  => {
     return (
       <>
-        <footer className="position-relative z-index-10 d-print-none">
+        <footer className="position-relative d-print-none">
           <div className="py-2 bg-gray-200">
             <div className="container">
               <div className="row">
@@ -30,7 +30,7 @@ export const Footer = ()  => {
                     </li>
                   </ul>
                 </div>
-                <div className="col-lg-2 ol-md-3 mb-5 mb-lg-0">
+                <div className="col-lg-2 col-md-3 mb-5 mb-lg-0">
                   <h6 className="font-weight-bold text-uppercase text-dark mb-3">
                     {constants.footer.links}
                   </h6>
@@ -64,8 +64,7 @@ export const Footer = ()  => {
           <div className="py-4 font-weight-light bg-gray-800">
             <div className="container">
               <div className="row align-items-center">
-                <div className="text-md-left text-center col-md-6">
-                  {/* TODO: link to portfolio, add contact info */}
+                <div className="text-md-left text-center">
                   <div dangerouslySetInnerHTML={{__html: constants.footer.copyright}} />
                 </div>
               </div>

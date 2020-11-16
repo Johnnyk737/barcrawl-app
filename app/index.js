@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { renderRoutes } from "react-router-config";
 
-import Main from './components/Main'
+import  {Main } from './components/Main'
 import ErrorPage from './components/ErrorPage'
 import Crawl from './components/crawl/Crawl';
 // import routes from './routes'
@@ -24,7 +24,3 @@ ReactDOM.render(
   </div>
   , app
 );  
-
-//TODO: connect DB
-//TODO: Allow browser back button to work
-//TODO: fix routing
